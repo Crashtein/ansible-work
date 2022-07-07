@@ -1,0 +1,18 @@
+---
+- name: NGINX latest
+  hosts: all
+  become: yes
+
+  tasks:
+   - name: NGINX update to latest
+     apt:
+      name: nginx
+      state: latest
+     notify:
+      - Restart NGINX
+
+  handlers:
+   - name: Restart NGINX
+     service:
+      name: nginx
+      state: restarted

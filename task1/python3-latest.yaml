@@ -1,0 +1,10 @@
+---
+- name: Python3
+  become: yes
+  hosts: all
+
+  tasks:
+   - name: Python3 latest
+     apt:
+      name: python3
+      state: latest
