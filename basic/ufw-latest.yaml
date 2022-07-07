@@ -14,5 +14,5 @@
   handlers:
    - name: Restart UFW
      service:
-      name: UFW
+      name: ufw
       state: restarted
