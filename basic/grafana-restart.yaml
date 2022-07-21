@@ -1,0 +1,10 @@
+---
+- name: Grafana restart
+  hosts: grafana
+  become: yes
+
+  tasks:
+   - name: Grafana restart
+     service:
+      name: ufw
+      state: restarted
